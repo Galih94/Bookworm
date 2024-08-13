@@ -10,7 +10,8 @@ struct ContentView: View {
     @AppStorage("notes") private var notes = ""
     var body: some View {
         NavigationStack {
-            TextEditor(text: $notes)
+            TextField("Enter your text", text: $notes, axis: .vertical)
+                .textFieldStyle(.roundedBorder)
                 .navigationTitle("Notes")
                 .padding()
         }
