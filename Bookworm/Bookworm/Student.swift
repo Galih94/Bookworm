@@ -4,9 +4,10 @@
 //
 //  Created by Galih Samudra on 13/08/24.
 //
+import SwiftData
 import Foundation
 
-@Observable
+@Model
 class Student {
     var id: UUID
     var name: String
