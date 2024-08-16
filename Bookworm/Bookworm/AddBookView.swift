@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddBookView: View {
+    @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) var modelContext
     
     @State private var title = ""
@@ -44,6 +45,7 @@ struct AddBookView: View {
                     Button("Save") {
                         let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
                         modelContext.insert(newBook)
+                        dismiss()
                     }
                 }
             }
