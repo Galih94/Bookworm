@@ -36,6 +36,8 @@ struct ContentView: View {
                                     .foregroundStyle(book.rating == 1 ? .red : .primary)
                                 Text(book.author)
                                     .foregroundStyle(book.rating == 1 ? .red : .secondary)
+                                Text(book.getDateString())
+                                    .foregroundStyle(book.rating == 1 ? .red : .secondary)
                             }
                         }
                     }
