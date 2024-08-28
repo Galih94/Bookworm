@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
-    @Query(sort: \Book.title) var books: [Book]
+    @Query(sort: \Book.title, order: .reverse) var books: [Book]
     @State private var showingAddScreem = false
     
     var body: some View {
