@@ -29,6 +29,8 @@ struct RatingView: View {
                     image(for: numb)
                         .foregroundStyle(numb > rating ? offColor : onColor)
                 }
+                .accessibilityLabel("\(numb == 1 ? "1 star" : "\(numb) stars")")
+                .accessibilityAddTraits(numb > rating ? [] : [.isSelected])
 
             }
         }
